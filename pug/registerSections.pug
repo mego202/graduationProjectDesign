@@ -1,0 +1,108 @@
+mixin head(title)
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='icon', href='./images/signUp.png')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='./css/bootstrap.min.css')
+    link(rel='stylesheet', href='./css/style.css')
+    link(rel='stylesheet', href='./css/login.css')
+    link(rel='stylesheet', href='./css/all.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap', rel='stylesheet')
+    title= title
+
+mixin navbar
+    nav.navbar.navbar-expand-lg.navbar-dark.p-0.d-flex.align-items-center.py-0
+      .container
+        a.navbar-brand.p-0(href='index.html')
+          img(src='images/logo.png')
+        button.navbar-toggler(data-toggle='collapse', data-target='#n-links')
+          span.navbar-toggler-icon
+        #n-links.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto.align-items-center
+            li.nav-item.position-relative
+              a.nav-link.d-flex.align-items-center.py-0.px-3(href='index.html') HOME
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link.d-flex.align-items-center.py-0.px-3(href='aboutUs.html') About
+            li.nav-item.position-relative
+              a.nav-link.d-flex.align-items-center.py-0.px-3 Search
+                i.fas.fa-angle-down.ml-2.fa-sm
+              ul.position-absolute.list-unstyled.dropdown-men
+                li.drop
+                  a.drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.active(href='schoolSearch.html') School
+                li.drop
+                  a.drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.last(href='hospitalSearch.html') Hospital
+            li.nav-item
+              a.nav-link.d-flex.align-items-center.py-0.px-3(href='contactUs.html') CONTACT 
+            li.nav-item.ml-3.text-white.sign.d-flex.align-items-center
+              .mr-3
+                a(href='login.html')
+                  i.fas.fa-lock
+                  span Sign in
+              .h-100(style='background-color: #00bcd4; line-height: 65px;')
+                a.p-2(href='register.html')
+                  i.fas.fa-sign-out-alt
+                  span Sign up
+
+mixin container
+    .container.p-0
+      .row
+        .col-6
+          form(name='Login')
+            h1.mt-5.font-weight-bold Sign Up
+            .mt-4
+              label(style='font-weight:bold') First Name
+              input.form-control(type='text', name='fName', style='width: 525px')
+            .mt-4
+              label(style='font-weight:bold') Last Name
+              input.form-control(type='text', name='lName', style='width: 525px')
+            .mt-4
+              label(style='font-weight:bold') Email
+              input.form-control(type='email', name='email', style='width: 525px')
+            .mt-4
+              label(style='font-weight:bold') Phone
+              input.form-control(type='text', name='phone', style='width: 525px')
+            .mt-4
+              label(style='font-weight:bold') Career
+              input.form-control(type='text', name='email', style='width: 525px')
+            .my-4
+              label(style='font-weight:bold') Password
+              input.form-control(type='Password', name='Password', style='width: 525px')
+            div
+              input.form-control.w-25.mt-5.text-white.border-0(type='submit', style='background-color: #0D1326; cursor: pointer;', value='Register')
+            .mt-4.mb-4
+              //
+                <input type="checkbox">
+                <label class="text-muted">Remember me?</label>
+                <label style="color:rgb(255, 79, 87)" class="font-weight-bold">Forgot Password?</label>
+              label If You have an account You Can Log In
+              label.font-weight-bold
+                a(href='login.html', style='color:rgb(255, 79, 87)') Login
+        .col-6.logImg(style='height: 490px')
+          img.w-100.h-100(src='./images/login/1.jpg')
+
+mixin footer
+    .footer.overflow-hidden.py-3
+      .container
+        .row
+          .col-6
+            ul.list-unstyled.d-flex.m-0
+              li
+                a.face.d-flex.justify-content-center.align-items-center.text-white.p-3.d-block(href='')
+                  i.fab.fa-facebook-f
+              li
+                a.twitter.d-flex.justify-content-center.align-items-center.ml-3.text-white.p-3.d-block(href='')
+                  i.fab.fa-twitter
+              li
+                a.google.d-flex.justify-content-center.align-items-center.ml-3.text-white.p-3.d-block(href='')
+                  i.fab.fa-google-plus-g
+          .col-6.text-white.justify-content-end.d-flex.align-items-center
+            | © 2020 EduHos. All rights reserved | Design by 
+            span.ml-1(style='color: rgb(255, 79, 87);') GIS Team
+
+mixin scripts
+    script(src='./js/jquery-3.4.1.min.js')
+    script(src='./js/popper.min.js')
+    script(src='./js/bootstrap.min.js')
+    script(src='./js/script.js')

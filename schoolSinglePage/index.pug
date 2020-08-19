@@ -1,0 +1,39 @@
+include ./pug/sections.pug
+doctype html
+html(lang='en')
+  head
+  +head('School Page')
+  body
+    // Navbar
+    +navbar
+
+    // School Header
+    +schoolHeader
+
+    // Welcome
+    +welcome
+
+    // About School
+    +aboutSchool
+
+    // Activities
+    +activities
+
+    // School Info
+    +schoolInfo
+
+    // Teachers
+    +teachers
+
+    // Useful Links
+    +usefulLinks
+
+    // Footer
+    +footer
+
+    // Scroll To Top Button
+    +backToTop
+
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    +scripts

@@ -1,0 +1,30 @@
+include ./pug/sections.pug
+doctype html
+html(lang='en')
+  head
+    +head('Hospital Page')
+  body
+    // Navbar
+    +navbar
+    // Hos Header
+    +hosHead
+    // Welcome
+    +welcome
+    // About Hos
+    +aboutHos
+    // Services
+    +activities
+    // Hospital Info
+    +hosInfo
+    // Doctors
+    +doctors
+    // Useful Links
+    +usefulLinks
+    // Footer
+    +footer
+    // Scroll To Top Button
+    +backToTop
+
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    +scripts

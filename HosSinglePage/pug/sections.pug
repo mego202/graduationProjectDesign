@@ -1,0 +1,322 @@
+mixin head(title)
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='icon', href='./images/logo/1.png')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='../css/bootstrap.min.css')
+    link(rel='stylesheet', href='../css/style.css')
+    link(rel='stylesheet', href='./css/style.css')
+    link(rel='stylesheet', href='../css/all.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap', rel='stylesheet')
+    title=title
+
+mixin navbar
+    nav.navbar.navbar-expand-lg.navbar-dark.p-0.d-flex.align-items-center.py-0
+      .container
+        a.navbar-brand.p-0(href='index.html')
+          img(src='./images/logo/1.png')
+        button.navbar-toggler(data-toggle='collapse', data-target='#n-links')
+          span.navbar-toggler-icon
+        #n-links.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto.align-items-center
+            li.nav-item.active.position-relative
+              a.nav-link.d-flex.align-items-center.py-0.px-3.anchor(href='index.html', data-scroll='.schoolHeader')
+                | HOME
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link.d-flex.align-items-center.py-0.px-3.anchor(href='course-details.html', data-scroll='.aboutSchool') ABOUT US
+            li.nav-item
+              a.nav-link.d-flex.align-items-center.py-0.px-3.anchor(href='aboutUs.html', data-scroll='.activities') SERVICES
+            li.nav-item
+              a.nav-link.d-flex.align-items-center.py-0.px-3.anchor(href='events.html', data-scroll='.schoolInfo') HOSPITAL INFO
+            li.nav-item.position-relative
+              a.nav-link.d-flex.align-items-center.py-0.px-3
+                | Search
+                i.fas.fa-angle-down.ml-2.fa-sm
+              ul.position-absolute.list-unstyled.dropdown-men
+                li.drop
+                  a.drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.active(href='../schoolSearch.html', data-s='t') School
+                li.drop
+                  a.drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.last(href='../hospitalSearch.html', data-s='t') Hospital
+            li.nav-item
+              a.nav-link.d-flex.align-items-center.py-0.px-3.anchor(href='contactUs.html', data-scroll='.teachers') TEACHERS
+
+mixin hosHead
+    header.schoolHeader.position-relative.d-flex.align-items-center
+      .container.text-white(style='z-index: 40;')
+        h3 SIMPLE AND EASY TO USE
+        h1.font-weight-bold.my-4(style='font-size: 3.2em;')
+          | PERFECT Hospital FOR YOU
+          br
+          |                 Benha Hospital SITE
+        p
+          | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+        button.btn.bg-white.border-0.px-5.py-3.mt-4
+          | Learn More
+
+mixin welcome
+    .welcome
+      .container.py-5.text-center
+        h1.font-weight-bold.text-white(style='text-transform: capitalize;')
+          | WELCOME TO THE 
+          span(style='color: #f2af59') ‘Benha Hospital SITE’
+          |  WEBSITE
+
+mixin aboutHos
+    .aboutSchool
+      .container.pt-3.pb-5
+        .row
+          .col-6
+            h2.font-weight-bold.position-relative.pb-3.mt-5 Benha Hospital 
+            p.my-4
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. luptate velit esse cillum dolore eu fugiat nulla pariatur.
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. luptate velit esse cillum dolore eu fugiat nulla pariatur.
+            // Modal
+            #exampleModal.modal.fade.w-100(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+              .modal-dialog(role='document')
+                .modal-content
+                  .modal-header(style='padding-bottom: 10px;')
+                    h5#exampleModalLabel.modal-title More Benha Hospital 
+                  .modal-body
+                    h2.font-weight-bold.position-relative.pb-3.mt-3 Benha Hospital 
+                    p.my-4
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. luptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. luptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    p.my-4
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. luptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. luptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.mt-3.px-5.py-3.text-white(data-toggle='modal', data-target='#exampleModal') ABOUT US
+          .col-6.p-5
+            img.w-100.h-100(src='./images/aboutSchool/1.png', style='transform: translateY(49px);')
+
+mixin activities
+    .activities
+      .container.py-5
+        .position-relative.act-header.pb-3
+          h2.font-weight-bold OUR SERVICES
+          h4.text-muted OUR BEST SERVICES FOR YOU
+        .row.my-5
+          .col-4.mt-3
+            .row.px-3
+              .ac-img.p-1.col-4.d-flex.justify-content-center.align-items-center(style='height: 120px; border: 5px solid #ffc67f;')
+                img.w-100.h-100(src='./images/activities/1.png')
+              .col-8.pr-0
+                h5.font-weight-bold SERVICE 1
+                p Lorem ipsum dolor sit amet, cons adipiscing elit. Pellentesa tinciunt rutrum sapien esse cillum.
+          .col-4.mt-3
+            .row.px-3
+              .ac-img.p-1.col-4.d-flex.justify-content-center.align-items-center(style='height: 120px; border: 5px solid #F7C3C2')
+                img.w-100.h-100(src='./images/activities/2.png')
+              .col-8.pr-0
+                h5.font-weight-bold SERVICE 2
+                p Lorem ipsum dolor sit amet, cons adipiscing elit. Pellentesa tinciunt rutrum sapien esse cillum.
+          .col-4.mt-3
+            .row.px-3
+              .ac-img.p-1.col-4.d-flex.justify-content-center.align-items-center(style='height: 120px; border: 5px solid #FEDD8A')
+                img.w-100.h-100(src='./images/activities/3.png')
+              .col-8.pr-0
+                h5.font-weight-bold SERVICE 3
+                p Lorem ipsum dolor sit amet, cons adipiscing elit. Pellentesa tinciunt rutrum sapien esse cillum.
+          .col-4.mt-4
+            .row.px-3
+              .ac-img.p-1.col-4.d-flex.justify-content-center.align-items-center(style='height: 120px; border: 5px solid #C6E2C7')
+                img.w-100.h-100(src='./images/activities/4.png')
+              .col-8.pr-0
+                h5.font-weight-bold SERVICE 4
+                p Lorem ipsum dolor sit amet, cons adipiscing elit. Pellentesa tinciunt rutrum sapien esse cillum.
+          .col-4.mt-4
+            .row.px-3
+              .ac-img.p-1.col-4.d-flex.justify-content-center.align-items-center(style='height: 120px; border: 5px solid #d9a3e3')
+                img.w-100.h-100(src='./images/activities/5.png')
+              .col-8.pr-0
+                h5.font-weight-bold SERVICE 5
+                p Lorem ipsum dolor sit amet, cons adipiscing elit. Pellentesa tinciunt rutrum sapien esse cillum.
+          .col-4.mt-4
+            .row.px-3
+              .ac-img.p-1.col-4.d-flex.justify-content-center.align-items-center(style='height: 120px; border: 5px solid #b2e6ec')
+                img.w-100.h-100(src='./images/activities/6.png')
+              .col-8.pr-0
+                h5.font-weight-bold SERVICE 6
+                p Lorem ipsum dolor sit amet, cons adipiscing elit. Pellentesa tinciunt rutrum sapien esse cillum.
+
+mixin hosInfo
+    .schoolInfo.py-5.position-relative.text-white
+      .container.py-5
+        .row
+          .col-3.text-center.px-0
+            .d-flex.justify-content-center.flex-column
+              .counter.mx-auto.d-flex.align-items-center.justify-content-center
+                h1.d-flex.justify-content-center.align-items-center 24
+              h4.mt-3.font-weight-bold DOCTOR AND STAFF
+              p Praesent turpis mauris, aliquet id lor gravida adipiscing lectus ut rutrum eat posuere risus.
+          .col-3.text-center.px-0
+            .d-flex.justify-content-center.flex-column
+              .counter.mx-auto.d-flex.align-items-center.justify-content-center
+                h1.d-flex.justify-content-center.align-items-center 200
+              h4.mt-3.font-weight-bold BED
+              p Praesent turpis mauris, aliquet id lor gravida adipiscing lectus ut rutrum eat posuere risus.
+          .col-3.text-center.px-0
+            .d-flex.justify-content-center.flex-column
+              .counter.mx-auto.d-flex.align-items-center.justify-content-center
+                h1.d-flex.justify-content-center.align-items-center 20
+              h4.mt-3.font-weight-bold ROOM
+              p Praesent turpis mauris, aliquet id lor gravida adipiscing lectus ut rutrum eat posuere risus.
+          .col-3.text-center.px-0
+            .d-flex.justify-content-center.flex-column
+              .counter.mx-auto.d-flex.align-items-center.justify-content-center
+                h1.d-flex.justify-content-center.align-items-center 10
+              h4.mt-3.font-weight-bold LABS
+              p Praesent turpis mauris, aliquet id lor gravida adipiscing lectus ut rutrum eat posuere risus.
+
+mixin doctors
+    .teachers
+      .container.p-5
+        h1.mb-4.font-weight-bold OUR DOCTORS
+        .row.mt-5
+          .col-3
+            #v-pills-tab.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
+              a#v-pills-magdy-tab.nav-link.py-3.active(data-toggle='pill', href='#v-pills-magdy', role='tab', aria-controls='v-pills-home', aria-selected='true') Dentist
+              a#v-pills-mohammed-tab.nav-link.py-3(data-toggle='pill', href='#v-pills-mohammed', role='tab', aria-controls='v-pills-profile', aria-selected='false')  Addiction psychiatrist
+              a#v-pills-hossam-tab.nav-link.py-3(data-toggle='pill', href='#v-pills-hossam', role='tab', aria-controls='v-pills-messages', aria-selected='false') Cardiologist
+              a#v-pills-ali-tab.nav-link.py-3(data-toggle='pill', href='#v-pills-ali', role='tab', aria-controls='v-pills-settings', aria-selected='false') Colon and rectal surgeon
+          .col-9
+            #v-pills-tabContent.tab-content
+              // Magdy Tab
+              #v-pills-magdy.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='v-pills-home-tab')
+                .row
+                  .col-3
+                    img(src='./images/teachers/1.png')
+                  .col-9.pl-5
+                    p
+                      span.font-weight-bold Name: Lorem 1
+                    p
+                      span.font-weight-bold Job: Dentist Doctor
+                    p
+                      span.font-weight-bold Age: 45
+                    p
+                      span.font-weight-bold Experience: 10 Years
+                    p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lada tum, totam rem aperiam,
+                    p.text-muted
+                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit vluptatem accusantium doloremque lada tum, totam rem aperam, eaque ipsa quae ab illo inventore verttis et quasi architecto beatae vitae dicta sunt excabo. accusantium doloremque lada tum, totam rem aperam.
+              // Mohammed Tab
+              #v-pills-mohammed.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-profile-tab')
+                .row
+                  .col-3
+                    img(src='./images/teachers/2.png')
+                  .col-9.pl-5
+                    p
+                      span.font-weight-bold Name: Lorem 2
+                    p
+                      span.font-weight-bold Job: Addiction psychiatrist.
+                    p
+                      span.font-weight-bold Age: 34
+                    p
+                      span.font-weight-bold Experience: 4 Years
+                    p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lada tum, totam rem aperiam,
+                    p.text-muted eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit vluptatem accusantium doloremque lada tum, totam rem aperam, eaque ipsa quae abillo inventore verttis et quasi architecto beatae vitae dicta sunt excabo. accusantium doloremque lada tum, totam rem aperam.
+              // Hossam Tab
+              #v-pills-hossam.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-messages-tab')
+                .row
+                  .col-3
+                    img(src='./images/teachers/3.png')
+                  .col-9.pl-5
+                    p
+                      span.font-weight-bold Name: Lorem 3
+                    p
+                      span.font-weight-bold Job: Cardiologist
+                    p
+                      span.font-weight-bold Age: 27
+                    p
+                      span.font-weight-bold Experience: 3 Years
+                    p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lada tum, totam rem aperiam,
+                    p.text-muted eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit vluptatem accusantium doloremque lada tum, totam rem aperam, eaque ipsa quae abillo inventore verttis et quasi architecto beatae vitae dicta sunt excabo. accusantium doloremque lada tum, totam rem aperam.
+              
+              #v-pills-ali.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-settings-tab')
+                .row
+                  .col-3
+                    img(src='./images/teachers/4.png')
+                  .col-9.pl-5
+                    p
+                      span.font-weight-bold Name: Lorem 4
+                    p
+                      span.font-weight-bold Job: Colon and rectal surgeon
+                    p
+                      span.font-weight-bold Age: 34
+                    p
+                      span.font-weight-bold Experience: 7 Years
+                    p.text-muted Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lada tum, totam rem aperiam,
+                    p.text-muted eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit vluptatem accusantium doloremque lada tum, totam rem aperam, eaque ipsa quae abillo inventore verttis et quasi architecto beatae vitae dicta sunt excabo. accusantium doloremque lada tum, totam rem aperam.
+
+mixin usefulLinks
+    .usefulLinks
+      .container.p-5
+        .row
+          .col-3
+            h2.font-weight-bold.text-white EduHos
+            p.text-muted Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus explicabo animi unde iste rerum, ratione cupiditate corporis magni repellendus modi consequatur reiciendis.
+          .col-3.hospitals
+            h3.text-white.pb-2 Top Hospitals
+            ul.list-unstyled
+              li
+                a.text-muted(href='#') مستشفى الجامعة ببنها
+              li.my-2
+                a.text-muted(href='#') المستشفى الكويتى التخصصى
+              li
+                a.text-muted(href='#') مستشفى الأطفال التخصصي ببنها
+              li.my-2
+                a.text-muted(href='#') المستشفى الأميري
+              li
+                a.text-muted(href='#') مستشفى دار الشفاء
+          .col-3.schools
+            h3.text-white.pb-2 Top Schools
+            ul.list-unstyled
+              li
+                a.text-muted(href='#') مدرسة بنها الحديثه
+              li.my-2
+                a.text-muted(href='#') مدرسة 25 يناير
+              li
+                a.text-muted(href='#') مدرسة السلام
+              li.my-2
+                a.text-muted(href='#') مدرسة 15مايو الاعدادية بنات بالمنشية بنها
+              li
+                a.text-muted(href='#') مدرسة الفتح الخاصه
+          .col-3.usefulData
+            h3.text-white.pb-2 Useful Links
+            ul.list-unstyled.text-muted
+              li A108 Adam Street New York, NY 535022 United States
+              li.my-3 Phone: +1 5589 55488 55
+              li Email: info@example.com
+   
+mixin footer
+    .footer.overflow-hidden.py-3
+      .container
+        .row
+          .col-6
+            ul.list-unstyled.d-flex.m-0
+              li
+                a.face.d-flex.justify-content-center.align-items-center.text-white.p-3.d-block(href='')
+                  i.fab.fa-facebook-f
+              li
+                a.twitter.d-flex.justify-content-center.align-items-center.ml-3.text-white.p-3.d-block(href='')
+                  i.fab.fa-twitter
+              li
+                a.google.d-flex.justify-content-center.align-items-center.ml-3.text-white.p-3.d-block(href='')
+                  i.fab.fa-google-plus-g
+          .col-6.text-white.justify-content-end.d-flex.align-items-center © 2020 EduHos. All rights reserved | Design by 
+            span.ml-1(style='color: rgb(255, 79, 87);') GIS Team
+
+mixin backToTop
+    button.b-t-t
+      i.fas.fa-chevron-up
+
+mixin scripts
+    script(src='../js/jquery-3.4.1.min.js')
+    script(src='../js/popper.min.js')
+    script(src='../js/bootstrap.min.js')
+    script(src='./js/schoolScript.js')

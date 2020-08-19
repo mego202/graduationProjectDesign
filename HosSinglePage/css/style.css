@@ -1,0 +1,162 @@
+button,a{
+    border-radius: 0 !important;
+}
+
+nav{
+    background-color: #FFF !important;
+    height: 65px;
+}
+
+nav a{
+    color: #0D1326 !important
+}
+
+nav li.active a,
+nav a:hover{
+    color: #FFF !important;
+}
+
+nav .navbar-collapse{
+    height: 65px !important
+}
+
+
+.fixed-nav-to-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+}
+
+/* school Header */
+.schoolHeader{
+    height: 540px;
+    background-image: url('../images/header/1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.schoolHeader::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #0D1326  22%, rgba(70,50,139,1) 77%, rgba(223,128,80,1) 100%);
+    opacity: .7;
+    z-index: 30;
+}
+
+.schoolHeader button{
+    transition: all .4s ease;
+    color: #00bcd4;
+}
+
+.schoolHeader button:hover{
+    background-color: #007bff !important;
+    color: #FFF
+}
+
+/* Welcome */
+.welcome{
+    background-color: #0D1326 !important;
+}
+
+/* about School */
+.aboutSchool h2::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    background-color: #00bcd4;
+    width: 10%;
+}
+
+.aboutSchool button{
+    transition: all .4s ease;
+    background-color: #00bcd4
+}
+
+.aboutSchool button:not(.close):hover{
+    background-color: transparent !important;
+    border: 1px solid #00bcd4;
+    color: #00bcd4 !important
+}
+
+/* activities */
+.activities{
+    background-color: #f8f8f8;
+}
+
+.activities .act-header::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 7%;
+    height: 2px;
+    background-color: #00bcd4;
+}
+
+/* school Info */
+.schoolInfo{
+    background-image: url('../images/schoolInfo/5e6d6d2f82e89.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.schoolInfo::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: 0;
+}
+
+.schoolInfo .counter{
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+}
+
+.schoolInfo .counter h1{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+/* Teachers */
+.teachers .col-3 a{
+    color: #0D1326 !important;
+}
+
+.teachers .col-3 a.active{
+    background-color: #00bcd4;
+    color: #FFF !important
+}
+
+.class-over{
+    transition: all .3s ease-in-out;
+}
+
+.class-lesson img{
+    transition: all .3s ease-in-out;
+}
+
+.class-lesson:hover .class-over{
+    opacity: .7 !important;
+}
+
+.class-lesson:hover img{
+    transform: scale(1.4);
+}

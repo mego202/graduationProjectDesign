@@ -1,0 +1,137 @@
+mixin head(title)
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='icon', href='./images/contact.png')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='./css/bootstrap.min.css')
+    link(rel='stylesheet', href='./css/style.css')
+    link(rel='stylesheet', href='./css/all.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap', rel='stylesheet')
+    title= title
+
+mixin navbar
+    nav.navbar.navbar-expand-lg.navbar-dark.p-0.d-flex.align-items-center.py-0
+      .container
+        a.navbar-brand.p-0(href='index.html')
+          img(src='images/logo.png')
+        button.navbar-toggler(data-toggle='collapse', data-target='#n-links')
+          span.navbar-toggler-icon
+        #n-links.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto.align-items-center
+            li.nav-item.position-relative
+              a.nav-link.d-flex.align-items-center.py-0.px-3(href='index.html') HOME
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link.d-flex.align-items-center.py-0.px-3(href='aboutUs.html') About
+            li.nav-item.position-relative
+              a.nav-link.d-flex.align-items-center.py-0.px-3 Search
+                i.fas.fa-angle-down.ml-2.fa-sm
+              ul.position-absolute.list-unstyled.dropdown-men
+                li.drop
+                  a.drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.active(href='schoolSearch.html') School
+                li.drop
+                  a.drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.last(href='hospitalSearch.html') Hospital
+            li.nav-item.active
+              a.nav-link.d-flex.align-items-center.py-0.px-3(href='contactUs.html') CONTACT 
+            li.nav-item.ml-3.text-white.sign.d-flex.align-items-center
+              .mr-3
+                a(href='login.html')
+                  i.fas.fa-lock
+                  span Sign in
+              .mr-3
+                a(href='register.html')
+                  i.fas.fa-sign-out-alt
+                  span Sign up
+
+mixin contact
+    .contact
+      .container.p-5
+        .row
+          .col-12
+            h4.position-relative(style='padding-left: 3.4rem!important;') GET IN TOUCH
+            h3 Contact Us
+          .col-12.mt-4
+            .row
+              .col-6
+                .row
+                  .col-6
+                    label.d-block Full Name
+                    input.w-100.form-control.border(type='text', style='background-color: #EEE;')
+                  .col-6
+                    label.d-block Email
+                    input.w-100.form-control(type='text', style='background-color: #EEE;')
+                  .col-12.mt-3
+                    label.d-block Your Message
+                    textarea.w-100.form-control(style='background-color: #EEE; height: 150px;')
+              .col-6
+                .col-12
+                  label.d-block Mobile
+                  input.w-100.form-control(type='text', style='background-color: #EEE;')
+                .col-12.mt-5
+                  input.w-100.form-control.text-white(type='submit', style='background-color: #00bcd4; height: 150px;')
+
+mixin usefulLinks
+    .usefulLinks
+      .container.p-5
+        .row
+          .col-3
+            h2.font-weight-bold.text-white EduHos
+            p.text-muted Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus explicabo animi unde iste rerum, ratione cupiditate corporis magni repellendus modi consequatur reiciendis.
+          .col-3.hospitals
+            h3.text-white.pb-2 Top Hospitals
+            ul.list-unstyled
+              li
+                a.text-muted(href='#') مستشفى الجامعة ببنها
+              li.my-2
+                a.text-muted(href='#') المستشفى الكويتى التخصصى
+              li
+                a.text-muted(href='#') مستشفى الأطفال التخصصي ببنها
+              li.my-2
+                a.text-muted(href='#') المستشفى الأميري
+              li
+                a.text-muted(href='#') مستشفى دار الشفاء
+          .col-3.schools
+            h3.text-white.pb-2 Top Schools
+            ul.list-unstyled
+              li
+                a.text-muted(href='#') مدرسة بنها الحديثه
+              li.my-2
+                a.text-muted(href='#') مدرسة 25 يناير
+              li
+                a.text-muted(href='#') مدرسة السلام
+              li.my-2
+                a.text-muted(href='#') مدرسة 15مايو الاعدادية بنات بالمنشية بنها
+              li
+                a.text-muted(href='#') مدرسة الفتح الخاصه
+          .col-3.usefulData
+            h3.text-white.pb-2 Useful Links
+            ul.list-unstyled.text-muted
+              li A108 Adam Street New York, NY 535022 United States
+              li.my-3 Phone: +1 5589 55488 55
+              li Email: info@example.com
+
+mixin footer
+    .footer.overflow-hidden.py-3
+      .container
+        .row
+          .col-6
+            ul.list-unstyled.d-flex.m-0
+              li
+                a.face.d-flex.justify-content-center.align-items-center.text-white.p-3.d-block(href='')
+                  i.fab.fa-facebook-f
+              li
+                a.twitter.d-flex.justify-content-center.align-items-center.ml-3.text-white.p-3.d-block(href='')
+                  i.fab.fa-twitter
+              li
+                a.google.d-flex.justify-content-center.align-items-center.ml-3.text-white.p-3.d-block(href='')
+                  i.fab.fa-google-plus-g
+          .col-6.text-white.justify-content-end.d-flex.align-items-center
+            | © 2020 EduHos. All rights reserved | Design by 
+            span.ml-1(style='color: rgb(255, 79, 87);') GIS Team
+
+mixin scripts
+    script(src='./js/jquery-3.4.1.min.js')
+    script(src='./js/popper.min.js')
+    script(src='./js/bootstrap.min.js')
+    script(src='./js/script.js')
